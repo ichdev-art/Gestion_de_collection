@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-=======
 <?php include_once '../../templates/head.php' ?>
 <?php include_once '../../templates/nav.php' ?>
 
 <body>
     <section class="home" style="padding-top:5.5rem;">
         <div class="page">
-        <form method="post">
+        <form method="post" novalidate>
             <h1>Insciption</h1>
             <div class="mb-3">
                 <label for="avatar" class="form-label">Photo de profil :</label>
@@ -34,4 +32,3 @@
 </body>
 
 </html>
->>>>>>> 12ce112 (jonction des controller et view)
