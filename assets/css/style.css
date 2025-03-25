@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background: #fff;
+  padding: 0px;
+  margin: 0px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  position: fixed;
+  z-index: 99;
+}
+nav .nav-title {
+  font-family: montserrat;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 20px 15px;
+}
+nav .nav-title a {
+  text-decoration: none;
+}
+nav .nav-title a b {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  background: #e74747;
+  padding: 10px;
+  border: 3px solid #e74747;
+}
+nav .nav-title a span {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #e74747;
+  padding: 10px;
+  border: 3px solid #e74747;
+}
+nav .nav-user {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 15px;
+}
+nav .nav-user .user {
+  font-size: 2rem;
+  text-decoration: none;
+  background: #e74747;
+  color: #fff;
+  padding: 5px 15px;
+  text-align: center;
+}
+nav .nav-user .profile {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #e74747;
+  padding: 5px 15px;
+  border: 3px solid #e74747;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home .page {
+  background: #ffd5d5;
+  width: 98.5%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.home .page form {
+  width: 50%;
+}
+.home .page form h1 {
+  font-family: montserrat;
+  font-weight: 800;
+  color: #e74747;
+}
+.home .page form label {
+  font-family: montserrat;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px 0px 0px 0px;
+}
+.home .page form input {
+  font-family: montserrat;
+  font-size: 1rem;
+}
+.home .page form .form-error {
+  color: red;
+  font-family: montserrat;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px 0px;
+}
+.home .page form button {
+  background: #e74747;
+  color: #fff;
+  border: 3px solid #e74747;
+  font-family: montserrat;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px;
+  text-transform: uppercase;
+}
+.home .page form a .main {
+  background: #fff;
+  color: #e74747;
+  border: 3px solid #e74747;
+  font-family: montserrat;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 15px;
+  text-transform: uppercase;
+}
+.home .page form a .second {
+  background: #e74747;
+  color: #fff;
+  border: 3px solid #e74747;
+  font-family: montserrat;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px;
+  text-transform: uppercase;
+  margin: 0px 10px;
+}
+.home .page form p {
+  font-family: montserrat;
+  font-size: 1.1rem;
+}/*# sourceMappingURL=style.css.map */
