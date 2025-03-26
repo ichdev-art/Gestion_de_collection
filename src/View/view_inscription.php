@@ -26,6 +26,7 @@
               <div class="form-error"><?= $error['password'] ?? '' ?></div>
             </div>
             <button type="submit">Envoyer</button>
+            <a class="link" href="../Controller/controller_connexion.php">se connecter</a>
           </form>
         </div>
     </section>

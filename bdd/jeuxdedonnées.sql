@@ -28,10 +28,10 @@ CREATE TABLE `76_comment` (
   `man_id` int NOT NULL,
   `user_id` int NOT NULL,
   PRIMARY KEY (`com_id`),
-  KEY `man_id` (`man_id`),
-  KEY `user_id` (`user_id`),
-  CONSTRAINT `76_comment_ibfk_1` FOREIGN KEY (`man_id`) REFERENCES `76_mangas` (`man_id`),
-  CONSTRAINT `76_comment_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `76_users` (`user_id`)
+  KEY `76_comment_ibfk_2` (`user_id`),
+  KEY `76_comment_ibfk_1` (`man_id`),
+  CONSTRAINT `76_comment_ibfk_1` FOREIGN KEY (`man_id`) REFERENCES `76_mangas` (`man_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `76_comment_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `76_users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -41,7 +41,6 @@ CREATE TABLE `76_comment` (
 
 LOCK TABLES `76_comment` WRITE;
 /*!40000 ALTER TABLE `76_comment` DISABLE KEYS */;
-INSERT INTO `76_comment` VALUES (1,'Incroyable, j\'adore ce manga !',1,2),(2,'Un chef-d\'œuvre, rien à redire.',3,4),(3,'L\'histoire est captivante.',5,1),(4,'Les dessins sont magnifiques !',4,3),(5,'Je ne peux pas attendre la suite.',2,5);
 /*!40000 ALTER TABLE `76_comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,11 +56,11 @@ CREATE TABLE `76_favoris` (
   `man_id` int NOT NULL,
   `user_id` int NOT NULL,
   PRIMARY KEY (`fav_id`),
-  KEY `man_id` (`man_id`),
-  KEY `user_id` (`user_id`),
-  CONSTRAINT `76_favoris_ibfk_1` FOREIGN KEY (`man_id`) REFERENCES `76_mangas` (`man_id`),
-  CONSTRAINT `76_favoris_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `76_users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `76_favoris_ibfk_2` (`user_id`),
+  KEY `76_favoris_ibfk_1` (`man_id`),
+  CONSTRAINT `76_favoris_ibfk_1` FOREIGN KEY (`man_id`) REFERENCES `76_mangas` (`man_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `76_favoris_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `76_users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +69,7 @@ CREATE TABLE `76_favoris` (
 
 LOCK TABLES `76_favoris` WRITE;
 /*!40000 ALTER TABLE `76_favoris` DISABLE KEYS */;
-INSERT INTO `76_favoris` VALUES (1,1,3),(2,2,1),(3,3,5),(4,4,2),(5,5,4);
+INSERT INTO `76_favoris` VALUES (10,6,30),(11,8,30),(12,10,31),(13,9,31);
 /*!40000 ALTER TABLE `76_favoris` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,9 +91,9 @@ CREATE TABLE `76_mangas` (
   `man_status` varchar(100) NOT NULL,
   `user_id` int NOT NULL,
   PRIMARY KEY (`man_id`),
-  KEY `user_id` (`user_id`),
-  CONSTRAINT `76_mangas_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `76_users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `76_mangas_ibfk_1` (`user_id`),
+  CONSTRAINT `76_mangas_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `76_users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,7 +102,7 @@ CREATE TABLE `76_mangas` (
 
 LOCK TABLES `76_mangas` WRITE;
 /*!40000 ALTER TABLE `76_mangas` DISABLE KEYS */;
-INSERT INTO `76_mangas` VALUES (1,'One Piece','Eiichiro Oda','Shonen',9,'onepiece.jpg','Un pirate à la recherche du One Piece.','En cours',1),(2,'Attack on Titan','Hajime Isayama','Shonen',9,'aot.jpg','L\'humanité lutte contre les Titans.','Terminé',2),(3,'Berserk','Kentaro Miura','Seinen',10,'berserk.jpg','L\'histoire tragique de Guts.','En pause',3),(4,'Tokyo Revengers','Ken Wakui','Shonen',8,'tokyorev.jpg','Voyage dans le temps et gangs.','Terminé',4),(5,'Nana','Ai Yazawa','Josei',9,'nana.jpg','Deux filles du même nom poursuivent leurs rêves.','En pause',5);
+INSERT INTO `76_mangas` VALUES (6,'One Piece','Eiichiro Oda','Aventure, Action',9,'OnePiece_Tome1.png','Luffy, un jeune garçon élastique, part à l\'aventure pour devenir le Roi des Pirates et trouve son premier équipier, Zoro.','En cours',30),(7,'Naruto','Masashi Kishimoto','Action, Aventure',9,'Naruto_Tome1.png','Naruto Uzumaki, un ninja rejeté par son village, rêve de devenir Hokage et découvre le secret du démon renard scellé en lui.','Terminé',30),(8,'Attack on Titan','Hajime Isayama','Action, Drame, Fantaisie',9,'AttackonTitan_Tome1.png','Eren Jaeger et ses amis vivent dans une ville entourée de murs pour se protéger des Titans, jusqu\'à ce qu\'un Titan colossal apparaisse.','Terminé',30),(9,'Demon Slayer','Koyoharu Gotouge','Action, Fantaisie',8,'DemonSlayer_Tome1.png','Tanjiro Kamado découvre sa famille massacrée par des démons et cherche un moyen de sauver sa sœur Nezuko, devenue démon.','Terminé',30),(10,'Jujutsu Kaisen','Gege Akutami','Action, Surnaturel',9,'JujutsuKaisen_Tome1.png','Yuji Itadori découvre un objet maudit et absorbe un doigt de Sukuna, un démon légendaire, ce qui bouleverse sa vie.','En cours',30),(11,'Death Note','Tsugumi Ohba','Thriller, Surnaturel',9,'DeathNote_Tome1.png','Light Yagami, un lycéen brillant, trouve un cahier lui permettant de tuer quiconque en y inscrivant son nom.','Terminé',30);
 /*!40000 ALTER TABLE `76_mangas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,13 +115,13 @@ DROP TABLE IF EXISTS `76_users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `76_users` (
   `user_id` int NOT NULL AUTO_INCREMENT,
-  `user_avatar` varchar(250) NOT NULL,
+  `user_avatar` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'avatar.png',
   `user_mail` varchar(100) NOT NULL,
   `user_pseudo` varchar(100) NOT NULL,
-  `user_password` varchar(50) NOT NULL,
+  `user_password` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_mail` (`user_mail`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -131,7 +130,7 @@ CREATE TABLE `76_users` (
 
 LOCK TABLES `76_users` WRITE;
 /*!40000 ALTER TABLE `76_users` DISABLE KEYS */;
-INSERT INTO `76_users` VALUES (1,'avatar1.jpg','user1@example.com','MangaFan1','password1'),(2,'avatar2.jpg','user2@example.com','OtakuMaster','password2'),(3,'avatar3.jpg','user3@example.com','ShonenKing','password3'),(4,'avatar4.jpg','user4@example.com','SeinenLover','password4'),(5,'avatar5.jpg','user5@example.com','JoseiReader','password5');
+INSERT INTO `76_users` VALUES (30,'avatar.png','said@fadli.com','Dark_sasuke','$2y$10$lZY0wlDvYs7c.0VmNLRLx.7yALDFIVppWyPAnV3y2HaU2uNcpgQk.'),(31,'avatar.png','said@fadlii.com','Dark_sasuke2','$2y$10$qUrCmgTLGnHTC.Z3.EuoruGEM9U4kRWyMMaCZGemPkfy0Ix1jjqdG');
 /*!40000 ALTER TABLE `76_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -144,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-26 10:36:46
+-- Dump completed on 2025-03-26 14:21:56

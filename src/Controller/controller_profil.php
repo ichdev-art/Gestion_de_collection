@@ -7,7 +7,8 @@ require_once '../../config.php';
 // On controle si la personne est bien loggée
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location:  ../../index.php');
+    header('Location:  controller_connexion.php
+    ');
     exit();
 }
 
@@ -23,24 +24,23 @@ $stmt->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
 
 $stmt->execute();
 
-$allPosts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$mangasCard = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$image = "";
-$i = 0;
+$pdo = '';
 
-foreach ($allPosts as $post) {
+$pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
 
-    $image .= "<div class='third'>
-        <img src='../../assets/img/users/" . $post['user_id'] . '/' . $post['man_image'] . "'alt='Une image'>
-        <img src='../../assets/img/users/" . $post['user_id'] . '/avatar/' . $post['user_avatar'] . "'alt='Une image'>
-        <h1>" . $post['user_pseudo'] . "</h1>
-        <p>" . $post['man_name'] . "</p>
-        <p>" . $post['man_auteur'] . "</p>
-        <p>" . $post['man_genre'] . "</p>
-        <p>" . $post['man_note'] . "</p>
-    </div>";
-    $i++;
-}
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$sql = 'SELECT * FROM `76_favoris` natural join `76_users` natural join `76_mangas` where `user_id` = :user_id';
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
+
+$stmt->execute();
+
+$favorisCard = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $pdo = '';
 

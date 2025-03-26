@@ -10,8 +10,8 @@
                 Votre inscription sur la Mangathèque est validée.
                 Pour accéder à votre profil, veuillez vous connecter. 
             </p>
-            <a href=""><button class="main">Connexion</button></a>
-            <a href=""><button class="second">Inscription</button></a>
+            <button class="main"><a href="../Controller/controller_connexion.php">Connexion</a></button>
+            <button class="second"><a href="../Controller/controller_inscription.php">Inscription</a></button>
           </form>
         </div>
     </section>

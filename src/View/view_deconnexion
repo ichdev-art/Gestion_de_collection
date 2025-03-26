@@ -9,8 +9,10 @@
             <p>
                 Vous êtes déconnecté.
             </p>
-            <button class="main"><a href="../Controller/controller_connexion.php">Connexion</a></button>
-            <button class="second"><a href="../Controller/controller_inscription.php">Inscription</a></button>
+            <span>
+            <a href=""><button class="main">Connexion</button></a>
+            <a href=""><button class="second">Inscription</button></a>
+            </span>
           </form>
         </div>
     </section>
