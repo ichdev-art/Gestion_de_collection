@@ -1,15 +1,16 @@
-<?php 
+<?php
 include_once '../../templates/head.php';
 include_once '../../templates/nav.php';
 
 
 ?>
+
 <body>
     <section class="profile" style="padding-top:5.5rem;">
         <div class="page">
             <div class="profile-main">
                 <div class="top">
-                    <img src="../../assets/img/users/<?=$_SESSION['user_id']?>/avatar/<?= $_SESSION['user_avatar'] ?>">
+                    <img src="../../assets/img/users/<?= $_SESSION['user_id'] ?>/avatar/<?= $_SESSION['user_avatar'] ?>">
                     <span>Pseudonyme</span>
                 </div>
                 <div class="collection">
@@ -27,37 +28,39 @@ include_once '../../templates/nav.php';
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                             aria-labelledby="nav-home-tab" tabindex="0">
                             <div class="content">
-                            <?php foreach ($mangasCard as $value) { ?>
-                                <div class="manga-card">
-                                    <div class="manga-top"
-                                        style="background:url(../../assets/img/users/<?= $_SESSION['user_id']?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
-                                        <span class="status"><?= $value["man_status"] ?></span>
-                                    </div>
-                                    <div class="manga-body">
-                                        <b><?= $value['man_name']?></b>
-                                        <p><?= $value['man_auteur']?></p>
-                                        <span class="genre"><?= $value['man_genre']?></span>
-                                    </div>
-                                </div>
-                            <?php } ?>
+                                <?php foreach ($mangasCard as $value) { ?>
+                                    <div class="manga-card"><a href="../Controller/controller_mangasPage.php?manga=<?= $value['man_id'] ?>">
+                                            <div class="manga-top"
+                                                style="background:url(../../assets/img/users/<?= $_SESSION['user_id'] ?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
+                                                <span class="status"><?= $value["man_status"] ?></span>
+                                            </div>
+                                            <div class="manga-body">
+                                                <b><?= $value['man_name'] ?></b>
+                                                <p><?= $value['man_auteur'] ?></p>
+                                                <span class="genre"><?= $value['man_genre'] ?></span>
+                                            </div>
+                                        </a></div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-favoris" role="tabpanel" aria-labelledby="nav-favoris-tab"
                             tabindex="0">
                             <div class="content">
-                            <?php foreach ($favorisCard as $value) { ?>
-                                <div class="manga-card">
-                                    <div class="manga-top"
-                                        style="background:url(../../assets/img/users/<?=$_SESSION['user_id']?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
-                                        <span class="status"><?= $value["man_status"] ?></span>
-                                        <i class="fa-solid fa-star"></i>
+                                <?php foreach ($favorisCard as $value) { ?>
+                                    <div class="manga-card">
+                                        <a href="">
+                                            <div class="manga-top"
+                                                style="background:url(../../assets/img/users/<?= $_SESSION['user_id'] ?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
+                                                <span class="status"><?= $value["man_status"] ?></span>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="manga-body">
+                                                <b><?= $value['man_name'] ?></b>
+                                                <p><?= $value['man_auteur'] ?></p>
+                                                <span class="genre">Shonen</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="manga-body">
-                                        <b><?= $value['man_name']?></b>
-                                        <p><?= $value['man_auteur']?></p>
-                                        <span class="genre"><?= $value['man_genre']?></span>
-                                    </div>
-                                </div>
                                 <?php } ?>
                             </div>
                         </div>

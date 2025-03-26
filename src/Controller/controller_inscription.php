@@ -138,14 +138,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // copier l'avatar par défaut si aucun fichier n'a été uploadé
                 $default_avatar = __DIR__ . "/../../avatar.png";
                 copy($default_avatar, $destination . "/avatar.png");
-
             }
         }
-        
+
         $pdo = '';
         header('Location: controller_connexion.php');
-    exit();
+        exit();
     }
-    
 }
 include_once '../View/view_inscription.php';
