@@ -4,7 +4,7 @@
 <body>
     <section class="home" style="padding-top:5.5rem;">
         <div class="page">
-        <form method="post" novalidate>
+        <form method="post" enctype="multipart/form-data" novalidate>
             <h1>Insciption</h1>
             <div class="mb-3">
                 <label for="avatar" class="form-label">Photo de profil :</label>
@@ -12,12 +12,12 @@
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">E-mail</label>
-              <input type="email" class="form-control" id="email" name="email" value="<?= $_POST['email'] ?? '' ?>">
+              <input type="email" class="form-control" id="email" name="email">
               <div class="form-error"><?= $error['email'] ?? '' ?></div>
             </div>
             <div class="mb-3">
                 <label for="pseudo" class="form-label">Pseudo</label>
-                <input type="text" class="form-control" id="pseudo" name="pseudo" value="<?= $_POST['pseudo'] ?? '' ?>">
+                <input type="text" class="form-control" id="pseudo" name="pseudo">
                 <div class="form-error"><?= $error['pseudo'] ?? '' ?></div>
               </div>
             <div class="mb-3">

@@ -17,11 +17,9 @@
               <input type="password" class="form-control" id="password" name="password">
               <div class="form-error"><?= $error['password'] ?? '' ?></div>
             </div>
-            <div class="bottom">
-              <button type="submit">se connecter</button>
-              <div class="form-error"><?= $error['connexion'] ?? '' ?></div>
-              <button class="main" style="margin-left:1.5rem;"><a href="../Controller/controller_inscription.php">Inscription</a></button>
-            <div>
+            <button type="submit">se connecter</button>
+            <div class="form-error"><?= $error['connexion'] ?? '' ?></div>
+            <a href="../Controller/controller_inscription.php"><button class="second">Inscription</button></a>
           </form>
         </div>
     </section>

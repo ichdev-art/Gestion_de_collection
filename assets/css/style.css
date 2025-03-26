@@ -250,13 +250,14 @@ nav .nav-user .profile {
   padding: 15px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   /* MANGA */
 }
 .profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card {
-  width: 35%;
+  width: 30%;
   background: #f2f2f2;
   border-radius: 25px;
   /* IMAGE MANGA CARD */
