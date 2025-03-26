@@ -9,7 +9,7 @@ $regex_pseudo = "/^[A-Za-z0-9-_-]+$/";
 $error = [];
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
 
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $error['pseudo'] = 'Pseudo non disponible';
         }
     }
-    
+
     $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -89,9 +89,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         // On stock notre requête avec des marqueurs nominatif
         $sql = 'INSERT INTO 76_users 
-            (user_pseudo,user_mail,user_password) 
+            (user_pseudo,user_mail,user_password,user_avatar) 
             VALUE 
-            (:pseudo,:mail,:password)';
+            (:pseudo,:mail,:password,:avatar)';
 
         // On prépare la requête avant de l'exécuter
         $stmt = $pdo->prepare($sql);
@@ -104,27 +104,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             return $input;
         }
 
-        $stmt->bindValue("pseudo", safeInput($_POST["pseudo"]), PDO::PARAM_STR);
-        $stmt->bindValue("mail", safeInput($_POST["email"]), PDO::PARAM_STR);
-        $stmt->bindValue("password", password_hash($_POST["password"], PASSWORD_DEFAULT), PDO::PARAM_STR);
+        $stmt->bindValue(":pseudo", safeInput($_POST["pseudo"]), PDO::PARAM_STR);
+        $stmt->bindValue(":mail", safeInput($_POST["email"]), PDO::PARAM_STR);
+        $stmt->bindValue(":password", password_hash($_POST["password"], PASSWORD_DEFAULT), PDO::PARAM_STR);
+        $stmt->bindValue(":avatar", "avatar.png", PDO::PARAM_STR);
 
         if ($stmt->execute()) {
             $last_user_id = $pdo->lastInsertId();
-            $destination = __DIR__ . "/../../assets/img/users/" .$last_user_id . "/avatar";
-            $source = __DIR__ . "/../../avatar.png";
-            $new_file = $destination . '/avatar.png';
+            $destination = __DIR__ . "/../../assets/img/users/" . $last_user_id . "/avatar";
 
-            if (mkdir($destination, 0777, true)) {
-                if (copy($source, $new_file)) {
-                    header('Location: controller_connexion.php');
-                    exit();
-                }
-                $pdo = '';
+            // verifie si le dossier et créer / si il existe pas le creer
+
+            if (!is_dir($destination)) {
+                mkdir($destination, 0777, true);
             }
-        };
+
+            // gere l'upload d'avatar si un fichier est envoye
+
+            if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] == 0) {
+                $avatar_path = $destination . "/avatar.png";
+
+                // supprime l'ancien avatar s'il existe
+                if (file_exists($avatar_path)) {
+                    unlink($avatar_path);
+                }
+                //deplace le fichier upload
+                if (move_uploaded_file($_FILES['avatar']['tmp_name'], $avatar_path)) {
+                    echo "Avatar mis à jour avec succès.";
+                } else {
+                    echo "Erreur lors de l'upload de l'avatar.";
+                }
+            } else {
+                // copier l'avatar par défaut si aucun fichier n'a été uploadé
+                $default_avatar = __DIR__ . "/../../avatar.png";
+                copy($default_avatar, $destination . "/avatar.png");
+
+            }
+        }
+        
+        $pdo = '';
     }
+    header('Location: controller_connexion.php');
+    exit();
 }
-
-
-
 include_once '../View/view_inscription.php';

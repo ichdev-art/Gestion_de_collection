@@ -19,7 +19,7 @@
             </div>
             <button type="submit">se connecter</button>
             <div class="form-error"><?= $error['connexion'] ?? '' ?></div>
-            <a href=""><button class="second">Inscription</button></a>
+            <a href="../Controller/controller_inscription.php"><button class="second">Inscription</button></a>
           </form>
         </div>
     </section>

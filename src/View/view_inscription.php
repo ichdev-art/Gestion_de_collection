@@ -4,7 +4,7 @@
 <body>
     <section class="home" style="padding-top:5.5rem;">
         <div class="page">
-        <form method="post" novalidate>
+        <form method="post" enctype="multipart/form-data" novalidate>
             <h1>Insciption</h1>
             <div class="mb-3">
                 <label for="avatar" class="form-label">Photo de profil :</label>
