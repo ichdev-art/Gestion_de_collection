@@ -9,8 +9,10 @@
             <p>
                 Vous êtes déconnecté.
             </p>
+            <span>
             <a href=""><button class="main">Connexion</button></a>
             <a href=""><button class="second">Inscription</button></a>
+            </span>
           </form>
         </div>
     </section>

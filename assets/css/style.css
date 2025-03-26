@@ -5,6 +5,7 @@ body {
   margin: 0px;
 }
 
+/*** BARRE DE NAVIGATION **/
 nav {
   width: 100%;
   display: flex;
@@ -14,6 +15,7 @@ nav {
   background: #fff;
   position: fixed;
   z-index: 99;
+  /* TITRE */
 }
 nav .nav-title {
   font-family: montserrat;
@@ -43,6 +45,8 @@ nav .nav-user {
   display: flex;
   flex-direction: row;
   padding: 10px 15px;
+  /* ICON CONNEXION / DECONNEXION */
+  /* ICON VOIR MON PROFIL */
 }
 nav .nav-user .user {
   font-size: 2rem;
@@ -60,6 +64,7 @@ nav .nav-user .profile {
   border: 3px solid #e74747;
 }
 
+/*** PAGES INSCRIPTION / CONNEXION ***/
 .home {
   width: 100%;
   display: flex;
@@ -74,9 +79,13 @@ nav .nav-user .profile {
   display: flex;
   justify-content: center;
   height: 100vh;
+  /* FORMULAIRE */
 }
 .home .page form {
   width: 50%;
+  /* MESSAGE D'ERREUR */
+  /* STYLE DE LIEN 1 */
+  /* STYLE DE LIEN 2 */
 }
 .home .page form h1 {
   font-family: montserrat;
@@ -112,28 +121,194 @@ nav .nav-user .profile {
   padding: 15px;
   text-transform: uppercase;
 }
-.home .page form a .main {
+.home .page form .link {
   background: #fff;
   color: #e74747;
   border: 3px solid #e74747;
   font-family: montserrat;
   font-size: 1rem;
-  font-weight: 600;
-  padding: 15px;
+  padding: 17px;
+  text-decoration: none;
   text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 1rem;
 }
-.home .page form a .second {
+.home .page form .main {
+  background: #fff;
+  color: #e74747;
+  border: 3px solid #e74747;
+  font-family: montserrat;
+  font-size: 1rem;
+  padding: 15px;
+  text-decoration: none;
+}
+.home .page form .main a {
+  text-decoration: none;
+  color: #e74747;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.home .page form .second {
   background: #e74747;
   color: #fff;
   border: 3px solid #e74747;
   font-family: montserrat;
   font-size: 1rem;
-  font-weight: bold;
   padding: 15px;
-  text-transform: uppercase;
   margin: 0px 10px;
+  text-decoration: none;
+}
+.home .page form .second a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .home .page form p {
   font-family: montserrat;
   font-size: 1.1rem;
+}
+.home .page form .bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+/*** PROFIL USER ***/
+.profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile .page {
+  background: #ffd5d5;
+  width: 98.5%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  /* INFORMATIONS DU PROFIL */
+}
+.profile .page .profile-main {
+  width: 60%;
+  /*** ONLGETS COLLECTION ***/
+}
+.profile .page .profile-main .top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  /* PHOTO DE PROFIL */
+  /* PSEUDO DU PROFIL */
+}
+.profile .page .profile-main .top img {
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+}
+.profile .page .profile-main .top span {
+  font-family: montserrat;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e74747;
+}
+.profile .page .profile-main .collection {
+  margin-top: 2rem;
+  /* BOUTON ONGLET */
+  /* CONTENU ONGLET*/
+}
+.profile .page .profile-main .collection .nav-tabs {
+  font-family: montserrat;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 0px;
+}
+.profile .page .profile-main .collection .nav-tabs .nav-link {
+  background: #f2f2f2;
+  color: #000;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+.profile .page .profile-main .collection .nav-tabs .nav-link.active {
+  color: #e74747;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.profile .page .profile-main .collection .tab-content .tab-pane {
+  background: #fff;
+  border-radius: 0px 25px 25px 25px;
+  border: 1px solid #ccc;
+  border-top: 0px;
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* MANGA */
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card {
+  width: 35%;
+  background: #f2f2f2;
+  border-radius: 25px;
+  /* IMAGE MANGA CARD */
+  /* INFORMATIONS SUR LE MANGA */
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-top {
+  width: 100%;
+  background: rgba(231, 71, 71, 0.6);
+  border-radius: 25px 25px 0px 0px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* A LIRE, EN COURS, TERMINE */
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-top .status {
+  font-family: montserrat;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background: rgb(231, 71, 71);
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 25px;
+  color: #fff;
+  margin: 10px;
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-top i {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 10px;
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-body {
+  font-family: montserrat;
+  padding: 15px;
+  /*TITRE DU MANGA*/
+  /*AUTEUR DU MANGA*/
+  /*GENRE DU MANGA*/
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-body b {
+  font-size: 1.2rem;
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-body p {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-body .genre {
+  font-family: montserrat;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 25px;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

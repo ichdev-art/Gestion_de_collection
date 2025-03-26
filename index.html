@@ -25,24 +25,89 @@
         </a>
     </div>
 </nav>
+
 <body>
-    <section class="home" style="padding-top:5.5rem;">
+    <section class="profile" style="padding-top:5.5rem;">
         <div class="page">
-        <form method="post" novalidate>
-            <h1>Connexion</h1>
-            <div class="mb-3">
-                <label for="pseudo" class="form-label">Pseudo</label>
-                <input type="text" class="form-control" id="pseudo" name="pseudo">
-              </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Mot de passe</label>
-              <input type="password" class="form-control" id="password" name="password">
+            <div class="profile-main">
+                <div class="top">
+                    <img src="avatar.png">
+                    <span>Pseudonyme</span>
+                </div>
+                <div class="collection">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true"><i class="fa-solid fa-book-open"></i>Ma collection</button>
+                        <button class="nav-link" id="nav-favoris-tab" data-bs-toggle="tab" data-bs-target="#nav-favoris"
+                            type="button" role="tab" aria-controls="nav-favoris" aria-selected="false">
+                            <i class="fa-solid fa-bookmark"></i> Mes
+                            favoris
+                        </button>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                            aria-labelledby="nav-home-tab" tabindex="0">
+                            <div class="content">
+                                <div class="manga-card">
+                                    <div class="manga-top"
+                                        style="background:url(Dandadan_1_crunchyroll.webp); background-size:cover; background-position:center">
+                                        <span class="status">terminé</span>
+                                    </div>
+                                    <div class="manga-body">
+                                        <b>Titre du manga et des fois c'est long</b>
+                                        <p>Auteur</p>
+                                        <span class="genre">Shonen</span>
+                                    </div>
+                                </div>
+                                <div class="manga-card">
+                                    <div class="manga-top"
+                                        style="background:url(Dandadan_1_crunchyroll.webp); background-size:cover; background-position:center">
+                                        <span class="status">terminé</span>
+                                    </div>
+                                    <div class="manga-body">
+                                        <b>Titre du manga et des fois c'est long</b>
+                                        <p>Auteur</p>
+                                        <span class="genre">Shonen</span>
+                                    </div>
+                                </div>
+                                <div class="manga-card">
+                                    <div class="manga-top"
+                                        style="background:url(Dandadan_1_crunchyroll.webp); background-size:cover; background-position:center">
+                                        <span class="status">terminé</span>
+                                    </div>
+                                    <div class="manga-body">
+                                        <b>Titre du manga et des fois c'est long</b>
+                                        <p>Auteur</p>
+                                        <span class="genre">Shonen</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-favoris" role="tabpanel" aria-labelledby="nav-favoris-tab"
+                            tabindex="0">
+                            <div class="content">
+                                <div class="manga-card">
+                                    <div class="manga-top"
+                                        style="background:url(Dandadan_1_crunchyroll.webp); background-size:cover; background-position:center">
+                                        <span class="status">terminé</span>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="manga-body">
+                                        <b>Titre du manga et des fois c'est long</b>
+                                        <p>Auteur</p>
+                                        <span class="genre">Shonen</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button type="submit">se connecter</button>
-            <a href=""><button class="second">Inscription</button></a>
-          </form>
         </div>
     </section>
+    <script src="node_modules@‌popperjs\core\dist\umd\popper.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
 </body>
 
 </html>
