@@ -146,6 +146,12 @@ nav {
                 margin-left: 1rem;
             }
 
+            .links {
+                display:flex;
+                flex-direction: row;
+                gap:0.5rem;
+            }
+
             /* STYLE DE LIEN 1 */
             .main {
                 background: #fff;

@@ -134,6 +134,11 @@ nav .nav-user .profile {
   font-weight: 600;
   margin-left: 1rem;
 }
+.home .page form .links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
 .home .page form .main {
   background: #fff;
   color: #e74747;
