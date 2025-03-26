@@ -143,8 +143,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         $pdo = '';
-    }
-    header('Location: controller_connexion.php');
+        header('Location: controller_connexion.php');
     exit();
+    }
+    
 }
 include_once '../View/view_inscription.php';
