@@ -87,7 +87,7 @@ nav {
         padding: 30px;
         display: flex;
         justify-content: center;
-        height: 100vh;
+        height: auto;
 
         /* FORMULAIRE */
         form {
@@ -197,7 +197,7 @@ nav {
     }
 }
 
-/*** PROFIL USER ***/ 
+/*** PROFIL USER ***/
 .profile {
     width: 100%;
     display: flex;
@@ -223,7 +223,7 @@ nav {
                 align-items: center;
                 gap: 1.5rem;
 
-                /* PHOTO DE PROFIL */ 
+                /* PHOTO DE PROFIL */
                 img {
                     border-radius: 100%;
                     width: 70px;
@@ -240,121 +240,333 @@ nav {
                 }
             }
 
-            /*** ONLGETS COLLECTION ***/ 
+            /*** ONLGETS COLLECTION ***/
             .collection {
                 margin-top: 2rem;
 
-                /* BOUTON ONGLET */ 
+                /* BOUTON ONGLET */
                 .nav-tabs {
                     font-family: montserrat;
-                    font-size:1rem;
+                    font-size: 1rem;
                     font-weight: 600;
                     text-transform: uppercase;
-                    border:0px;
+                    border: 0px;
 
                     .nav-link {
-                        background:#f2f2f2;
-                        color:#000;
-                        border:1px solid #ccc;
+                        background: #f2f2f2;
+                        color: #000;
+                        border: 1px solid #ccc;
                         display: flex;
                         flex-direction: row;
-                        gap:0.5rem;
+                        gap: 0.5rem;
                         align-items: center;
                     }
 
                     .nav-link.active {
-                        color:#e74747;
-                        background:#fff;
-                        border:1px solid #ccc;
+                        color: #e74747;
+                        background: #fff;
+                        border: 1px solid #ccc;
                     }
                 }
 
-                /* CONTENU ONGLET*/ 
+                /* CONTENU ONGLET*/
                 .tab-content {
-                
+
                     .tab-pane {
                         background: #fff;
-                        border-radius:0px 25px 25px 25px;
-                        border:1px solid #ccc;
-                        border-top:0px;
+                        border-radius: 0px 25px 25px 25px;
+                        border: 1px solid #ccc;
+                        border-top: 0px;
 
                         .content {
-                            padding:15px;
+                            padding: 15px;
                             display: flex;
                             flex-direction: row;
-                            gap:1.5rem;
-                            justify-content:flex-start;
+                            gap: 1.5rem;
+                            justify-content: flex-start;
                             align-items: flex-start;
 
-                            /* MANGA */ 
+                            /* MANGA */
                             .manga-card {
-                                width:35%;
-                                background:#f2f2f2;
-                                border-radius:25px;
+                                width: 35%;
+                                background: #f2f2f2;
+                                border-radius: 25px;
 
-                                /* IMAGE MANGA CARD */ 
+                                /* IMAGE MANGA CARD */
                                 .manga-top {
-                                    width:100%;
-                                    background:rgba(231,71,71, 0.6);
-                                    border-radius:25px 25px 0px 0px;
-                                    height:150px;
-                                    display:flex;
+                                    width: 100%;
+                                    background: rgba(231, 71, 71, 0.6);
+                                    border-radius: 25px 25px 0px 0px;
+                                    height: 150px;
+                                    display: flex;
                                     flex-direction: row;
                                     justify-content: space-between;
                                     align-items: flex-start;
 
-                                    /* A LIRE, EN COURS, TERMINE */ 
+                                    /* A LIRE, EN COURS, TERMINE */
                                     .status {
                                         font-family: montserrat;
-                                        font-size:0.8rem;
+                                        font-size: 0.8rem;
                                         text-transform: uppercase;
-                                        background:rgba(231,71,71, 1);
-                                        padding:10px;
+                                        background: rgba(231, 71, 71, 1);
+                                        padding: 10px;
                                         font-weight: 600;
                                         border-radius: 25px;
-                                        color:#fff;
-                                        margin:10px;
+                                        color: #fff;
+                                        margin: 10px;
                                     }
 
                                     i {
-                                       color:#fff;
-                                       font-size:1.8rem;
-                                       margin:10px; 
+                                        color: #fff;
+                                        font-size: 1.8rem;
+                                        margin: 10px;
                                     }
                                 }
 
                                 /* INFORMATIONS SUR LE MANGA */
                                 .manga-body {
                                     font-family: montserrat;
-                                    padding:15px;
+                                    padding: 15px;
 
                                     /*TITRE DU MANGA*/
                                     b {
-                                        font-size:1.2rem;
+                                        font-size: 1.2rem;
                                     }
 
                                     /*AUTEUR DU MANGA*/
                                     p {
                                         text-transform: uppercase;
-                                        font-weight:500;
+                                        font-weight: 500;
                                     }
 
                                     /*GENRE DU MANGA*/
                                     .genre {
                                         font-family: montserrat;
-                                        font-size:0.8rem;
+                                        font-size: 0.8rem;
                                         text-transform: uppercase;
-                                        background:rgba(0,0,0, 0.3);
-                                        padding:10px;
+                                        background: rgba(0, 0, 0, 0.3);
+                                        padding: 10px;
                                         font-weight: 600;
                                         border-radius: 25px;
-                                        color:#fff;
+                                        color: #fff;
                                     }
-                                    
+
                                 }
 
                             }
 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*** PAGE MANGA COMPLET ***/
+.manga {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .page {
+        background: #ffd5d5;
+        width: 98.5%;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        height: auto;
+
+        .manga-post {
+            background: #fff;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 60%;
+
+            .manga-both {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                /* INFORMATIONS à gauche */
+                .left {
+                    padding: 15px;
+
+                    /* USER qui a ajouté le MANGA */
+                    .user-manga {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        /* PHOTO DE PROFIL */
+                        img {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 100%;
+                        }
+
+                        /* PSEUDO USER */
+                        span {
+                            font-family: montserrat;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    /* IMAGE MANGA COUVERTURE */
+                    .manga-img {
+                        width: 300px;
+                        height: 425px;
+                        border-radius: 25px;
+                    }
+
+                    /* MANGA à lire, en cours, terminé */
+                    .status {
+                        margin: 10px;
+
+                        span {
+                            font-family: montserrat;
+                            font-size: 0.8rem;
+                            text-transform: uppercase;
+                            background: rgba(231, 71, 71, 1);
+                            padding: 10px;
+                            font-weight: 600;
+                            border-radius: 25px;
+                            color: #fff;
+                        }
+                    }
+
+                }
+
+                /* INFORMATIONS à droite */
+                .right {
+                    padding: 50px 30px 10px 15px;
+
+                    /* TITRE DU MANGA */
+                    h1 {
+                        font-family: montserrat;
+                        font-weight: 800;
+                    }
+
+                    /* RESUME DU MANGA */
+                    p {
+                        font-family: montserrat;
+                        font-size: 1rem;
+                        text-align: justify;
+                        padding: 20px 0px;
+                    }
+
+                    .info-line {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 1rem;
+
+                        /* AUTEUR DU MANGA */
+                        b {
+                            font-family: montserrat;
+                            font-weight: 500;
+                            font-size: 1rem;
+                        }
+
+                        /* GENRE DU MANGA */
+                        span {
+                            font-family: montserrat;
+                            font-size: 0.8rem;
+                            text-transform: uppercase;
+                            background: rgba(0, 0, 0, 0.3);
+                            padding: 10px;
+                            font-weight: 600;
+                            border-radius: 25px;
+                            color: #fff;
+                        }
+
+                        /* NOTE DU MANGA */
+                        .note {
+                            background: transparent;
+                            color: #e74747;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .manga-comments {
+                font-display: flex;
+                padding: 20px;
+
+                h2 {
+                    font-weight: 800;
+                    font-family: montserrat;
+                }
+
+                /* TOUS LES COMMENTAIRES */
+                .post-comments {
+                    background: #f2f2f2;
+                    border-radius: 25px;
+
+                    /* UN COMMENTAIRE */
+                    .comment {
+                        padding: 10px 15px;
+
+                        .title {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: center;
+                            font-family: montserrat;
+                            gap: 1rem;
+
+                            /*PSEUDO COMMENTAIRE*/
+                            b {
+                                text-transform: uppercase;
+                                font-size: 800;
+                            }
+
+                            /*TITRE COMMENTAIRE*/
+                            span {
+                                text-transform: uppercase;
+                                font-size: 600;
+                            }
+                        }
+
+                        p {
+                            font-family: montserrat;
+                            font-size: 0.9rem;
+                        }
+                    }
+
+                    .add-comment {
+                        padding: 10px;
+
+                        .coms {
+                            display: flex;
+                            flex-direction: row;
+                            gap:1rem;
+
+                            .com-input {
+                                font-family: montserrat;
+
+                            }
+                        }
+
+                        button {
+                            font-size: 1rem;
+                            text-decoration: none;
+                            color: #e74747;
+                            border: 3px solid #e74747;
+                            background:#fff;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            height:50px;
+                            margin-top:1.5rem;
+                            border-radius: 20px;
                         }
                     }
                 }

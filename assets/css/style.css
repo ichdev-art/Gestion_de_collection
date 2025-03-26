@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   background: #fff;
@@ -78,7 +79,7 @@ nav .nav-user .profile {
   padding: 30px;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   /* FORMULAIRE */
 }
 .home .page form {
@@ -311,4 +312,185 @@ nav .nav-user .profile {
   font-weight: 600;
   border-radius: 25px;
   color: #fff;
+}
+
+/*** PAGE MANGA COMPLET ***/
+.manga {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.manga .page {
+  background: #ffd5d5;
+  width: 98.5%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+.manga .page .manga-post {
+  background: #fff;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+}
+.manga .page .manga-post .manga-both {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* INFORMATIONS à gauche */
+  /* INFORMATIONS à droite */
+}
+.manga .page .manga-post .manga-both .left {
+  padding: 15px;
+  /* USER qui a ajouté le MANGA */
+  /* IMAGE MANGA COUVERTURE */
+  /* MANGA à lire, en cours, terminé */
+}
+.manga .page .manga-post .manga-both .left .user-manga {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* PHOTO DE PROFIL */
+  /* PSEUDO USER */
+}
+.manga .page .manga-post .manga-both .left .user-manga img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.manga .page .manga-post .manga-both .left .user-manga span {
+  font-family: montserrat;
+  font-size: 1rem;
+}
+.manga .page .manga-post .manga-both .left .manga-img {
+  width: 300px;
+  height: 425px;
+  border-radius: 25px;
+}
+.manga .page .manga-post .manga-both .left .status {
+  margin: 10px;
+}
+.manga .page .manga-post .manga-both .left .status span {
+  font-family: montserrat;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background: rgb(231, 71, 71);
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 25px;
+  color: #fff;
+}
+.manga .page .manga-post .manga-both .right {
+  padding: 50px 30px 10px 15px;
+  /* TITRE DU MANGA */
+  /* RESUME DU MANGA */
+}
+.manga .page .manga-post .manga-both .right h1 {
+  font-family: montserrat;
+  font-weight: 800;
+}
+.manga .page .manga-post .manga-both .right p {
+  font-family: montserrat;
+  font-size: 1rem;
+  text-align: justify;
+  padding: 20px 0px;
+}
+.manga .page .manga-post .manga-both .right .info-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  /* AUTEUR DU MANGA */
+  /* GENRE DU MANGA */
+  /* NOTE DU MANGA */
+}
+.manga .page .manga-post .manga-both .right .info-line b {
+  font-family: montserrat;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.manga .page .manga-post .manga-both .right .info-line span {
+  font-family: montserrat;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 25px;
+  color: #fff;
+}
+.manga .page .manga-post .manga-both .right .info-line .note {
+  background: transparent;
+  color: #e74747;
+  font-size: 1.5rem;
+}
+.manga .page .manga-post .manga-comments {
+  font-display: flex;
+  padding: 20px;
+  /* TOUS LES COMMENTAIRES */
+}
+.manga .page .manga-post .manga-comments h2 {
+  font-weight: 800;
+  font-family: montserrat;
+}
+.manga .page .manga-post .manga-comments .post-comments {
+  background: #f2f2f2;
+  border-radius: 25px;
+  /* UN COMMENTAIRE */
+}
+.manga .page .manga-post .manga-comments .post-comments .comment {
+  padding: 10px 15px;
+}
+.manga .page .manga-post .manga-comments .post-comments .comment .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: montserrat;
+  gap: 1rem;
+  /*PSEUDO COMMENTAIRE*/
+  /*TITRE COMMENTAIRE*/
+}
+.manga .page .manga-post .manga-comments .post-comments .comment .title b {
+  text-transform: uppercase;
+  font-size: 800;
+}
+.manga .page .manga-post .manga-comments .post-comments .comment .title span {
+  text-transform: uppercase;
+  font-size: 600;
+}
+.manga .page .manga-post .manga-comments .post-comments .comment p {
+  font-family: montserrat;
+  font-size: 0.9rem;
+}
+.manga .page .manga-post .manga-comments .post-comments .add-comment {
+  padding: 10px;
+}
+.manga .page .manga-post .manga-comments .post-comments .add-comment .coms {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.manga .page .manga-post .manga-comments .post-comments .add-comment .coms .com-input {
+  font-family: montserrat;
+}
+.manga .page .manga-post .manga-comments .post-comments .add-comment button {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #e74747;
+  border: 3px solid #e74747;
+  background: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 50px;
+  margin-top: 1.5rem;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */
