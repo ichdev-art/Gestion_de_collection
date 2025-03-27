@@ -30,20 +30,17 @@ include_once '../../templates/nav.php';
                             aria-labelledby="nav-home-tab" tabindex="0">
                             <div class="content">
                                 <?php foreach ($mangasCard as $value) { ?>
-                                    <div class="manga-card">
-                                        <div class="manga-top"
-                                            style="background:url(../../assets/img/users/<?= $_SESSION['user_id'] ?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
-                                            <span class="status"><?= $value["man_status"] ?></span>
-                                            <button>
-                                            <i class="fa-regular fa-star"></i>
-                                            </button>
-                                        </div>
-                                        <div class="manga-body">
-                                            <b><?= $value['man_name'] ?></b>
-                                            <p><?= $value['man_auteur'] ?></p>
-                                            <span class="genre"><?= $value['man_genre'] ?></span>
-                                        </div>
-                                    </div>
+                                    <div class="manga-card"><a href="../Controller/controller_mangasPage.php?manga=<?= $value['man_id'] ?>">
+                                            <div class="manga-top"
+                                                style="background:url(../../assets/img/users/<?= $_SESSION['user_id'] ?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
+                                                <span class="status"><?= $value["man_status"] ?></span>
+                                            </div>
+                                            <div class="manga-body">
+                                                <b><?= $value['man_name'] ?></b>
+                                                <p><?= $value['man_auteur'] ?></p>
+                                                <span class="genre"><?= $value['man_genre'] ?></span>
+                                            </div>
+                                        </a></div>
                                 <?php } ?>
                             </div>
                         </div>
@@ -52,16 +49,18 @@ include_once '../../templates/nav.php';
                             <div class="content">
                                 <?php foreach ($favorisCard as $value) { ?>
                                     <div class="manga-card">
-                                        <div class="manga-top"
-                                            style="background:url(../../assets/img/users/<?= $_SESSION['user_id'] ?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
-                                            <span class="status"><?= $value["man_status"] ?></span>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <div class="manga-body">
-                                            <b><?= $value['man_name'] ?></b>
-                                            <p><?= $value['man_auteur'] ?></p>
-                                            <span class="genre"><?= $value['man_genre'] ?></span>
-                                        </div>
+                                        <a href="../Controller/controller_mangasPage.php?manga=<?= $value['man_id'] ?>">
+                                            <div class="manga-top"
+                                                style="background:url(../../assets/img/users/<?= $_SESSION['user_id'] ?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
+                                                <span class="status"><?= $value["man_status"] ?></span>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="manga-body">
+                                                <b><?= $value['man_name'] ?></b>
+                                                <p><?= $value['man_auteur'] ?></p>
+                                                <span class="genre">Shonen</span>
+                                            </div>
+                                        </a>
                                     </div>
                                 <?php } ?>
                             </div>

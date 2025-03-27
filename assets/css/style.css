@@ -289,10 +289,14 @@ nav .nav-user .profile {
   width: 30%;
   background: #f2f2f2;
   border-radius: 25px;
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a {
+  text-decoration: none;
+  color: #000;
   /* IMAGE MANGA CARD */
   /* INFORMATIONS SUR LE MANGA */
 }
-.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-top {
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a .manga-top {
   width: 100%;
   background: rgba(231, 71, 71, 0.6);
   border-radius: 25px 25px 0px 0px;
@@ -303,7 +307,7 @@ nav .nav-user .profile {
   align-items: flex-start;
   /* A LIRE, EN COURS, TERMINE */
 }
-.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-top .status {
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a .manga-top .status {
   font-family: montserrat;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -314,7 +318,7 @@ nav .nav-user .profile {
   color: #fff;
   margin: 10px;
 }
-.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-top i {
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a .manga-top i {
   color: #fff;
   font-size: 1.8rem;
   padding: 10px;
@@ -323,21 +327,21 @@ nav .nav-user .profile {
   background: transparent;
   border: 0px;
 }
-.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-body {
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a .manga-body {
   font-family: montserrat;
   padding: 15px;
   /*TITRE DU MANGA*/
   /*AUTEUR DU MANGA*/
   /*GENRE DU MANGA*/
 }
-.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-body b {
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a .manga-body b {
   font-size: 1.2rem;
 }
-.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-body p {
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a .manga-body p {
   text-transform: uppercase;
   font-weight: 500;
 }
-.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-body .genre {
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a .manga-body .genre {
   font-family: montserrat;
   font-size: 0.8rem;
   text-transform: uppercase;
