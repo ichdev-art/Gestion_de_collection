@@ -140,4 +140,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-include_once '../View/view_.php';
+include_once '../View/view_editPost.php';
