@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $status = ["à lire", "en cours", "terminé"];
 
-    if (!isset($_POST['note'])) {
-        $errors['note'] = 'ce champ est obligatoire';
+    if (!isset($_POST['status'])) {
+        $errors['status'] = 'ce champ est obligatoire';
     }
 
     if (empty($errors)) {
