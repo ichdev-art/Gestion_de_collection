@@ -172,6 +172,9 @@ nav .nav-user .profile {
   padding: 15px;
   margin: 0px 10px;
   text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .home .page form .second a {
   text-decoration: none;
@@ -323,7 +326,7 @@ nav .nav-user .profile {
   font-size: 1.8rem;
   padding: 10px;
 }
-.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-top button {
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a .manga-top button {
   background: transparent;
   border: 0px;
 }
@@ -455,6 +458,8 @@ nav .nav-user .profile {
   font-size: 0.9rem;
   padding: 10px;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .manga .page .manga-post .manga-both .right .manga-post .main a {
   text-decoration: none;
@@ -470,6 +475,9 @@ nav .nav-user .profile {
   font-size: 0.9rem;
   padding: 10px;
   text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .manga .page .manga-post .manga-both .right .manga-post .second a {
   text-decoration: none;
