@@ -28,11 +28,7 @@ include_once '../../templates/nav.php';
                                 <b><?= $mangasCard['man_auteur'] ?></b>
                                 <span><?= $mangasCard['man_genre'] ?></span>
                                 <span class="note">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
+                                    <?= $note ?>
                                 </span>
                             </div>
                             <p>
@@ -60,7 +56,7 @@ include_once '../../templates/nav.php';
                                         </div>
                                     </div>
                                 <button class="main">
-                                    <a href="../Controller/controller_editPost.php"><i class="fa-solid fa-pen"></i> éditer</a>
+                                    <a href="../Controller/controller_editPost.php?manga=<?= $mangasCard['man_id'] ?>"><i class="fa-solid fa-pen"></i> éditer</a>
                                 </button>
                             </div>
                         </div>

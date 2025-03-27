@@ -60,6 +60,51 @@ $stmt->execute();
 $comment = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
+switch ($mangasCard['man_note']) {
+    case 1:
+        $note = '<i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>';
+        break;
+
+    case 2:
+        $note = '<i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>';
+        break;
+
+    case 3:
+        $note = '<i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>';
+        break;
+
+    case 4:
+        $note = '<i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>';
+        break;
+
+    case 5:
+        $note = '<i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>';
+        break;
+
+    default:
+        break;
+}
+
 if (isset($_GET['mangas'])) {
     Mangas::deleteMangas($_GET['mangas']);
     header('Location: controller_profil.php?mangas=' . $_GET['mangas']);
