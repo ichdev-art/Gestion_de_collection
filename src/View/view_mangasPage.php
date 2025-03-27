@@ -12,7 +12,7 @@ include_once '../../templates/nav.php';
                     <div class="left">
                         <div class="user-manga">
                             <img src="../../assets/img/users/<?= $mangasCard['user_id'] ?>/avatar/<?= $mangasCard['user_avatar'] ?>">
-                            <b><?= $mangasCard['user_pseudo'] ?></b>
+                            <b><?= $_SESSION['user_pseudo'] ?></b>
                         </div>
                         <div class="manga-img"
                             style="background:url(../../assets/img/users/<?= $mangasCard['user_id'] ?>/<?= $mangasCard['man_image'] ?>); background-size:cover; background-position:center">
@@ -44,24 +44,14 @@ include_once '../../templates/nav.php';
                 <div class="manga-comments">
                     <h2>commentaires & notes</h2>
                     <div class="post-comments">
-                        <?php foreach ($mangasCard as $value) { ?>
+                        <?php foreach ($comment as $value) { ?>
                             <div class="comment">
                                 <span class="title">
                                     <b><?= $value['user_pseudo'] ?></b>
-                                    <span>titre du commentaire</span>
                                 </span>
                                 <p><?= $value['com_text'] ?></p>
                             </div>
                         <?php } ?>
-                        <div class="comment">
-                            <span class="title">
-                                <b>pseudonyme</b>
-                                <span>ARC du grand tournois</span>
-                            </span>
-                            <p>
-                                Meilleur arc de tous les temps
-                            </p>
-                        </div>
                         <form class="add-comment" method="post" novalidate>
                             <div class="coms">
                                 <div class="com-input" style="width:30%;">

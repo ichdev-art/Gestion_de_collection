@@ -11,7 +11,7 @@ include_once '../../templates/nav.php';
             <div class="profile-main">
                 <div class="top">
                     <img src="../../assets/img/users/<?= $_SESSION['user_id'] ?>/avatar/<?= $_SESSION['user_avatar'] ?>">
-                    <span>Pseudonyme</span>
+                    <span><?= $_SESSION['user_pseudo'] ?></span>
                 </div>
                 <div class="collection">
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
