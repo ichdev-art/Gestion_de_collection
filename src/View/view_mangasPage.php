@@ -39,9 +39,26 @@ include_once '../../templates/nav.php';
                                 <?= $mangasCard['man_description'] ?>
                             </p>
                             <div class="manga-post">
-                                <button class="second">
-                                    <a href="../Controller/controller_mangasPage.php?mangas=<?= $mangasCard['man_id'] ?>"><i class="fa-solid fa-square-xmark"></i> supprimer</a>
-                                </button>
+                                    <button type="button" class="second" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="fa-solid fa-square-xmark"></i> supprimer</a>
+                                    </button>
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmation</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Voulez vous vraiment supprimer ?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="main" data-bs-dismiss="modal">annuler</button>
+                                                    <button type="button" class="second"><a href="../Controller/controller_mangasPage.php?mangas=<?= $mangasCard['man_id'] ?>">Supprimer</a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <button class="main">
                                     <a href="../Controller/controller_editPost.php"><i class="fa-solid fa-pen"></i> éditer</a>
                                 </button>
