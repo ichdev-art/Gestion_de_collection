@@ -8,4 +8,5 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://kit.fontawesome.com/dd845416b8.js" crossorigin="anonymous"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>

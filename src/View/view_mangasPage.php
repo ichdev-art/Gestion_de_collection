@@ -1,8 +1,9 @@
-<?php 
+<?php
 include_once '../../templates/head.php';
 include_once '../../templates/nav.php';
 
 ?>
+
 <body>
     <section class="manga" style="padding-top:5.5rem;">
         <div class="page">
@@ -47,6 +48,14 @@ include_once '../../templates/nav.php';
                                 repudiandae? Id illo quae reprehenderit aperiam alias quam nemo velit, maiores incidunt
                                 ullam pariatur cum, perferendis recusandae?
                             </p>
+                            <div class="manga-post">
+                                <button class="second">
+                                    <a href=""><i class="fa-solid fa-square-xmark"></i> supprimer</a>
+                                </button>
+                                <button class="main">
+                                    <a href=""><i class="fa-solid fa-pen"></i> éditer</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -57,6 +66,7 @@ include_once '../../templates/nav.php';
                             <span class="title">
                                 <b>pseudonyme</b>
                                 <span>titre du commentaire</span>
+                                <button><i class="fa-solid fa-delete-left"></i> supprimer</button>
                             </span>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat dolorem tempora
                                 eligendi, praesentium excepturi voluptas facere voluptatem temporibus ullam, ad
@@ -93,8 +103,10 @@ include_once '../../templates/nav.php';
             </div>
         </div>
     </section>
-    <script src="node_modules@‌popperjs\core\dist\umd\popper.js"></script>
-    <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
 </body>
 
 </html>

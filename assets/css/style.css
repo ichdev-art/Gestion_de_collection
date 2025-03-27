@@ -52,17 +52,17 @@ nav .nav-user {
 nav .nav-user .user {
   font-size: 2rem;
   text-decoration: none;
-  background: #e74747;
-  color: #fff;
+  color: #e74747;
   padding: 5px 15px;
-  text-align: center;
+  border: 3px solid #e74747;
 }
 nav .nav-user .profile {
   font-size: 2rem;
   text-decoration: none;
-  color: #e74747;
+  background: #e74747;
+  color: #fff;
   padding: 5px 15px;
-  border: 3px solid #e74747;
+  text-align: center;
 }
 
 /*** PAGES INSCRIPTION / CONNEXION ***/
@@ -79,7 +79,7 @@ nav .nav-user .profile {
   padding: 30px;
   display: flex;
   justify-content: center;
-  height: auto;
+  min-height: 100vh;
   /* FORMULAIRE */
 }
 .home .page form {
@@ -103,6 +103,9 @@ nav .nav-user .profile {
 .home .page form input {
   font-family: montserrat;
   font-size: 1rem;
+}
+.home .page form textarea {
+  resize: none;
 }
 .home .page form .form-error {
   color: red;
@@ -138,6 +141,12 @@ nav .nav-user .profile {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+}
+.home .page form .review {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
 }
 .home .page form .main {
   background: #fff;
@@ -193,7 +202,7 @@ nav .nav-user .profile {
   padding: 30px;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   /* INFORMATIONS DU PROFIL */
 }
 .profile .page .profile-main {
@@ -218,6 +227,21 @@ nav .nav-user .profile {
   font-size: 1.5rem;
   font-weight: 600;
   color: #e74747;
+}
+.profile .page .profile-main .top .main {
+  background: #fff;
+  color: #e74747;
+  border: 3px solid #e74747;
+  font-family: montserrat;
+  font-size: 0.9rem;
+  padding: 10px;
+  text-decoration: none;
+}
+.profile .page .profile-main .top .main a {
+  text-decoration: none;
+  color: #e74747;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .profile .page .profile-main .collection {
   margin-top: 2rem;
@@ -293,7 +317,11 @@ nav .nav-user .profile {
 .profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-top i {
   color: #fff;
   font-size: 1.8rem;
-  margin: 10px;
+  padding: 10px;
+}
+.profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-top button {
+  background: transparent;
+  border: 0px;
 }
 .profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card .manga-body {
   font-family: montserrat;
@@ -334,7 +362,7 @@ nav .nav-user .profile {
   padding: 30px;
   display: flex;
   justify-content: center;
-  height: auto;
+  min-height: 100vh;
 }
 .manga .page .manga-post {
   background: #fff;
@@ -408,6 +436,43 @@ nav .nav-user .profile {
   text-align: justify;
   padding: 20px 0px;
 }
+.manga .page .manga-post .manga-both .right .manga-post {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* STYLE DE LIEN 1 */
+  /* STYLE DE LIEN 2 */
+}
+.manga .page .manga-post .manga-both .right .manga-post .main {
+  background: #fff;
+  color: #e74747;
+  border: 3px solid #e74747;
+  font-family: montserrat;
+  font-size: 0.9rem;
+  padding: 10px;
+  text-decoration: none;
+}
+.manga .page .manga-post .manga-both .right .manga-post .main a {
+  text-decoration: none;
+  color: #e74747;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.manga .page .manga-post .manga-both .right .manga-post .second {
+  background: #e74747;
+  color: #fff;
+  border: 3px solid #e74747;
+  font-family: montserrat;
+  font-size: 0.9rem;
+  padding: 10px;
+  text-decoration: none;
+}
+.manga .page .manga-post .manga-both .right .manga-post .second a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .manga .page .manga-post .manga-both .right .info-line {
   display: flex;
   flex-direction: row;
@@ -472,6 +537,15 @@ nav .nav-user .profile {
 .manga .page .manga-post .manga-comments .post-comments .comment .title span {
   text-transform: uppercase;
   font-size: 600;
+}
+.manga .page .manga-post .manga-comments .post-comments .comment .title button {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border: 0px;
+  color: #fff;
+  border-radius: 10px;
 }
 .manga .page .manga-post .manga-comments .post-comments .comment p {
   font-family: montserrat;
