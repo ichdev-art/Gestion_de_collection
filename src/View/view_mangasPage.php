@@ -53,7 +53,7 @@ include_once '../../templates/nav.php';
                                     <a href=""><i class="fa-solid fa-square-xmark"></i> supprimer</a>
                                 </button>
                                 <button class="main">
-                                    <a href=""><i class="fa-solid fa-pen"></i> éditer</a>
+                                    <a href="../Controller/controller_editPost.php"><i class="fa-solid fa-pen"></i> éditer</a>
                                 </button>
                             </div>
                         </div>
