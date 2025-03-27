@@ -28,11 +28,7 @@ include_once '../../templates/nav.php';
                                 <b><?= $mangasCard['man_auteur'] ?></b>
                                 <span><?= $mangasCard['man_genre'] ?></span>
                                 <span class="note">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
+                                    <?= $note ?>
                                 </span>
                             </div>
                             <p>
@@ -60,33 +56,10 @@ include_once '../../templates/nav.php';
                                         </div>
                                     </div>
                                 <button class="main">
-                                    <a href="../Controller/controller_editPost.php"><i class="fa-solid fa-pen"></i> éditer</a>
+                                    <a href="../Controller/controller_editPost.php?manga=<?= $mangasCard['man_id'] ?>"><i class="fa-solid fa-pen"></i> éditer</a>
                                 </button>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="manga-comments">
-                    <h2>commentaires & notes</h2>
-                    <div class="post-comments">
-                        <?php foreach ($comment as $value) { ?>
-                            <div class="comment">
-                                <span class="title">
-                                    <b><?= $value['user_pseudo'] ?></b>
-                                </span>
-                                <p><?= $value['com_text'] ?></p>
-                            </div>
-                        <?php } ?>
-                        <form class="add-comment" method="post" novalidate>
-                            <div class="coms">
-                                <div class="com-input" style="width:70%;">
-                                    <label for="comment" class="form-label">commentaire(s)</label>
-                                    <input type="text" id="comment" title="comment" name="comment" class="form-control"
-                                        placeholder="<?= $errors['comment'] ?? 'écrire un commentaire...' ?>">
-                                </div>
-                                <button type="submit">commenter</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
