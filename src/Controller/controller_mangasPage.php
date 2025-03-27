@@ -2,6 +2,7 @@
 
 session_start();
 include_once '../../config.php';
+include_once '../Model/model_mangas.php';
 
 
 //regex pour le commentaire
@@ -30,7 +31,7 @@ $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',
 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$sql = 'SELECT man_name,man_auteur,man_genre,man_note,man_image,man_description,man_status,user_avatar,user_pseudo,user_id from `76_mangas` natural join `76_users` where man_id = :man_id';
+$sql = 'SELECT man_name,man_id,man_auteur,man_genre,man_note,man_image,man_description,man_status,user_avatar,user_pseudo,user_id from `76_mangas` natural join `76_users` where man_id = :man_id';
 
 $stmt = $pdo->prepare($sql);
 
@@ -57,5 +58,11 @@ $stmt->bindValue(':man_id', $_GET['manga'], PDO::PARAM_INT);
 $stmt->execute();
 
 $comment = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+if (isset($_GET['mangas'])) {
+    Mangas::deleteMangas($_GET['mangas']);
+    header('Location: controller_profil.php?mangas=' . $_GET['mangas']);
+}
 
 include_once '../View/view_mangasPage.php';

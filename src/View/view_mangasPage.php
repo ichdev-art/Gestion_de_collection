@@ -40,7 +40,7 @@ include_once '../../templates/nav.php';
                             </p>
                             <div class="manga-post">
                                 <button class="second">
-                                    <a href=""><i class="fa-solid fa-square-xmark"></i> supprimer</a>
+                                    <a href="../Controller/controller_mangasPage.php?mangas=<?= $mangasCard['man_id'] ?>"><i class="fa-solid fa-square-xmark"></i> supprimer</a>
                                 </button>
                                 <button class="main">
                                     <a href=""><i class="fa-solid fa-pen"></i> éditer</a>
