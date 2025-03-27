@@ -38,7 +38,7 @@ include_once '../../templates/nav.php';
                             <p>
                                 <?= $mangasCard['man_description'] ?>
                             </p>
-                            <div class="manga-post">
+                            <div class="manga-edit">
                                     <button type="button" class="second" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <i class="fa-solid fa-square-xmark"></i> supprimer</a>
                                     </button>
@@ -64,29 +64,6 @@ include_once '../../templates/nav.php';
                                 </button>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="manga-comments">
-                    <h2>commentaires & notes</h2>
-                    <div class="post-comments">
-                        <?php foreach ($comment as $value) { ?>
-                            <div class="comment">
-                                <span class="title">
-                                    <b><?= $value['user_pseudo'] ?></b>
-                                </span>
-                                <p><?= $value['com_text'] ?></p>
-                            </div>
-                        <?php } ?>
-                        <form class="add-comment" method="post" novalidate>
-                            <div class="coms">
-                                <div class="com-input" style="width:70%;">
-                                    <label for="comment" class="form-label">commentaire(s)</label>
-                                    <input type="text" id="comment" title="comment" name="comment" class="form-control"
-                                        placeholder="<?= $errors['comment'] ?? 'écrire un commentaire...' ?>">
-                                </div>
-                                <button type="submit">commenter</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>

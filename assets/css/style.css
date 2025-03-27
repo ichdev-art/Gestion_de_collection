@@ -379,6 +379,7 @@ nav .nav-user .profile {
   justify-content: flex-start;
   align-items: flex-start;
   width: 60%;
+  height: 660px;
 }
 .manga .page .manga-post .manga-both {
   display: flex;
@@ -443,14 +444,14 @@ nav .nav-user .profile {
   text-align: justify;
   padding: 20px 0px;
 }
-.manga .page .manga-post .manga-both .right .manga-post {
+.manga .page .manga-post .manga-both .right .manga-edit {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   /* STYLE DE LIEN 1 */
   /* STYLE DE LIEN 2 */
 }
-.manga .page .manga-post .manga-both .right .manga-post .main {
+.manga .page .manga-post .manga-both .right .manga-edit .main {
   background: #fff;
   color: #e74747;
   border: 3px solid #e74747;
@@ -461,13 +462,13 @@ nav .nav-user .profile {
   text-transform: uppercase;
   font-weight: 600;
 }
-.manga .page .manga-post .manga-both .right .manga-post .main a {
+.manga .page .manga-post .manga-both .right .manga-edit .main a {
   text-decoration: none;
   color: #e74747;
   text-transform: uppercase;
   font-weight: 600;
 }
-.manga .page .manga-post .manga-both .right .manga-post .second {
+.manga .page .manga-post .manga-both .right .manga-edit .second {
   background: #e74747;
   color: #fff;
   border: 3px solid #e74747;
@@ -479,7 +480,7 @@ nav .nav-user .profile {
   text-transform: uppercase;
   font-weight: bold;
 }
-.manga .page .manga-post .manga-both .right .manga-post .second a {
+.manga .page .manga-post .manga-both .right .manga-edit .second a {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;

@@ -436,6 +436,7 @@ nav {
             justify-content: flex-start;
             align-items: flex-start;
             width: 60%;
+            height:660px;
 
             .manga-both {
                 display: flex;
@@ -510,7 +511,7 @@ nav {
                         padding: 20px 0px;
                     }
 
-                    .manga-post {
+                    .manga-edit {
                         display: flex;
                         flex-direction: row;
                         gap: 1rem;
