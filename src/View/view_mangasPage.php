@@ -38,6 +38,14 @@ include_once '../../templates/nav.php';
                             <p>
                                 <?= $mangasCard['man_description'] ?>
                             </p>
+                            <div class="manga-post">
+                                <button class="second">
+                                    <a href=""><i class="fa-solid fa-square-xmark"></i> supprimer</a>
+                                </button>
+                                <button class="main">
+                                    <a href=""><i class="fa-solid fa-pen"></i> éditer</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -54,11 +62,6 @@ include_once '../../templates/nav.php';
                         <?php } ?>
                         <form class="add-comment" method="post" novalidate>
                             <div class="coms">
-                                <div class="com-input" style="width:30%;">
-                                    <label for="title" class="form-label">Titre du commentaire</label>
-                                    <input type="text" id="title" title="title" name="title" class="form-control"
-                                        placeholder="">
-                                </div>
                                 <div class="com-input" style="width:70%;">
                                     <label for="comment" class="form-label">commentaire(s)</label>
                                     <input type="text" id="comment" title="comment" name="comment" class="form-control"
@@ -72,8 +75,10 @@ include_once '../../templates/nav.php';
             </div>
         </div>
     </section>
-    <script src="node_modules@‌popperjs\core\dist\umd\popper.js"></script>
-    <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
 </body>
 
 </html>

@@ -12,6 +12,7 @@ include_once '../../templates/nav.php';
                 <div class="top">
                     <img src="../../assets/img/users/<?= $_SESSION['user_id'] ?>/avatar/<?= $_SESSION['user_avatar'] ?>">
                     <span><?= $_SESSION['user_pseudo'] ?></span>
+                <button class="main"><a href="../Controller/controller_creation.php"><i class="fa-solid fa-square-plus"></i> ajouter un manga</a></button>
                 </div>
                 <div class="collection">
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -48,7 +49,7 @@ include_once '../../templates/nav.php';
                             <div class="content">
                                 <?php foreach ($favorisCard as $value) { ?>
                                     <div class="manga-card">
-                                        <a href="">
+                                        <a href="../Controller/controller_mangasPage.php?manga=<?= $value['man_id'] ?>">
                                             <div class="manga-top"
                                                 style="background:url(../../assets/img/users/<?= $_SESSION['user_id'] ?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
                                                 <span class="status"><?= $value["man_status"] ?></span>
@@ -69,8 +70,12 @@ include_once '../../templates/nav.php';
             </div>
         </div>
     </section>
-    <script src="/node_modules@‌popperjs\core\dist\umd\popper.js"></script>
-    <script src="/node_modules\bootstrap\dist\js\bootstrap.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
 </body>
 
 </html>
