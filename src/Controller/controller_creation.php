@@ -90,12 +90,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindValue(":man_auteur", safeInput($_POST["auteur"]), PDO::PARAM_STR);
         $stmt->bindValue(":man_genre", safeInput($_POST["genre"]), PDO::PARAM_STR);
         $stmt->bindValue(":man_note", $_POST["note"], PDO::PARAM_STR);
-        $stmt->bindValue(":man_image", $newName , PDO::PARAM_STR);
+        $stmt->bindValue(":man_image", $newName, PDO::PARAM_STR);
         $stmt->bindValue(":man_description", safeInput($_POST["desc"]), PDO::PARAM_STR);
         $stmt->bindValue(":man_status", $_POST['status'], PDO::PARAM_STR);
         $stmt->bindValue(":user_id", $_SESSION['user_id'], PDO::PARAM_INT);
 
-        $stmt->execute();
+        if ($stmt->execute()) {
+            header('Location: controller_profil.php');
+            exit();
+        }
     }
 }
 

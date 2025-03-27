@@ -24,6 +24,11 @@ nav .nav-title {
   font-size: 1rem;
   padding: 20px 15px;
 }
+@media (max-width: 400px) {
+  nav .nav-title {
+    padding: 10px 10px;
+  }
+}
 nav .nav-title a {
   text-decoration: none;
 }
@@ -35,12 +40,22 @@ nav .nav-title a b {
   padding: 10px;
   border: 3px solid #e74747;
 }
+@media (max-width: 400px) {
+  nav .nav-title a b {
+    font-size: 1rem;
+  }
+}
 nav .nav-title a span {
   font-size: 2rem;
   font-weight: 400;
   color: #e74747;
   padding: 10px;
   border: 3px solid #e74747;
+}
+@media (max-width: 400px) {
+  nav .nav-title a span {
+    font-size: 1rem;
+  }
 }
 nav .nav-user {
   display: flex;
@@ -49,12 +64,22 @@ nav .nav-user {
   /* ICON CONNEXION / DECONNEXION */
   /* ICON VOIR MON PROFIL */
 }
+@media (max-width: 400px) {
+  nav .nav-user {
+    padding: 10px 15px;
+  }
+}
 nav .nav-user .user {
   font-size: 2rem;
   text-decoration: none;
   color: #e74747;
   padding: 5px 15px;
   border: 3px solid #e74747;
+}
+@media (max-width: 400px) {
+  nav .nav-user .user {
+    font-size: 1.2rem;
+  }
 }
 nav .nav-user .profile {
   font-size: 2rem;
@@ -63,6 +88,11 @@ nav .nav-user .profile {
   color: #fff;
   padding: 5px 15px;
   text-align: center;
+}
+@media (max-width: 400px) {
+  nav .nav-user .profile {
+    font-size: 1.2rem;
+  }
 }
 
 /*** PAGES INSCRIPTION / CONNEXION ***/
@@ -87,6 +117,11 @@ nav .nav-user .profile {
   /* MESSAGE D'ERREUR */
   /* STYLE DE LIEN 1 */
   /* STYLE DE LIEN 2 */
+}
+@media (max-width: 400px) {
+  .home .page form {
+    width: 100%;
+  }
 }
 .home .page form h1 {
   font-family: montserrat;
@@ -212,6 +247,11 @@ nav .nav-user .profile {
   width: 60%;
   /*** ONLGETS COLLECTION ***/
 }
+@media (max-width: 400px) {
+  .profile .page .profile-main {
+    width: 100%;
+  }
+}
 .profile .page .profile-main .top {
   display: flex;
   flex-direction: row;
@@ -219,6 +259,11 @@ nav .nav-user .profile {
   gap: 1.5rem;
   /* PHOTO DE PROFIL */
   /* PSEUDO DU PROFIL */
+}
+@media (max-width: 400px) {
+  .profile .page .profile-main .top {
+    flex-direction: column;
+  }
 }
 .profile .page .profile-main .top img {
   border-radius: 100%;
@@ -292,6 +337,11 @@ nav .nav-user .profile {
   width: 30%;
   background: #f2f2f2;
   border-radius: 25px;
+}
+@media (max-width: 400px) {
+  .profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card {
+    width: 100%;
+  }
 }
 .profile .page .profile-main .collection .tab-content .tab-pane .content .manga-card a {
   text-decoration: none;
@@ -381,6 +431,12 @@ nav .nav-user .profile {
   width: 60%;
   height: 660px;
 }
+@media (max-width: 400px) {
+  .manga .page .manga-post {
+    width: 100%;
+    height: auto;
+  }
+}
 .manga .page .manga-post .manga-both {
   display: flex;
   flex-direction: row;
@@ -388,6 +444,11 @@ nav .nav-user .profile {
   align-items: flex-start;
   /* INFORMATIONS à gauche */
   /* INFORMATIONS à droite */
+}
+@media (max-width: 400px) {
+  .manga .page .manga-post .manga-both {
+    flex-direction: column;
+  }
 }
 .manga .page .manga-post .manga-both .left {
   padding: 15px;
@@ -434,6 +495,11 @@ nav .nav-user .profile {
   /* TITRE DU MANGA */
   /* RESUME DU MANGA */
 }
+@media (max-width: 400px) {
+  .manga .page .manga-post .manga-both .right {
+    padding: 10px 20px;
+  }
+}
 .manga .page .manga-post .manga-both .right h1 {
   font-family: montserrat;
   font-weight: 800;
@@ -450,6 +516,11 @@ nav .nav-user .profile {
   gap: 1rem;
   /* STYLE DE LIEN 1 */
   /* STYLE DE LIEN 2 */
+}
+@media (max-width: 400px) {
+  .manga .page .manga-post .manga-both .right .manga-edit {
+    justify-content: center;
+  }
 }
 .manga .page .manga-post .manga-both .right .manga-edit .main {
   background: #fff;
@@ -495,6 +566,13 @@ nav .nav-user .profile {
   /* AUTEUR DU MANGA */
   /* GENRE DU MANGA */
   /* NOTE DU MANGA */
+}
+@media (max-width: 400px) {
+  .manga .page .manga-post .manga-both .right .info-line {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 .manga .page .manga-post .manga-both .right .info-line b {
   font-family: montserrat;

@@ -34,6 +34,9 @@ include_once '../../templates/nav.php';
                                             <div class="manga-top"
                                                 style="background:url(../../assets/img/users/<?= $_SESSION['user_id'] ?>/<?= $value['man_image'] ?>); background-size:cover; background-position:center">
                                                 <span class="status"><?= $value["man_status"] ?></span>
+                                                <button>
+                                                <i class="fa-regular fa-star"></i>
+                                                </button>
                                             </div>
                                             <div class="manga-body">
                                                 <b><?= $value['man_name'] ?></b>

@@ -1,6 +1,6 @@
 <nav>
     <div class="nav-title">
-        <a href="#">
+        <a href="../Controller/controller_profil.php">
             <b><i class="fa-solid fa-book"></i> MANGA</b><span>THEQUE</span>
         </a>
     </div>
