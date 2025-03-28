@@ -11,7 +11,6 @@
                 Pour accéder à votre profil, veuillez vous connecter. 
             </p>
             <button class="main"><a href="../Controller/controller_connexion.php">Connexion</a></button>
-            <button class="second"><a href="../Controller/controller_inscription.php">Inscription</a></button>
           </form>
         </div>
     </section>
