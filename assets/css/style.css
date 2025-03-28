@@ -577,11 +577,11 @@ nav .nav-user .profile {
 .manga .page .manga-post .manga-both .right .info-line b {
   font-family: montserrat;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .manga .page .manga-post .manga-both .right .info-line span {
   font-family: montserrat;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.3);
   padding: 10px;
@@ -592,7 +592,7 @@ nav .nav-user .profile {
 .manga .page .manga-post .manga-both .right .info-line .note {
   background: transparent;
   color: #e74747;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .manga .page .manga-post .manga-comments {
   font-display: flex;

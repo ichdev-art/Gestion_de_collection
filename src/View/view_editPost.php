@@ -28,7 +28,7 @@
                 </select>
                 </div>
                 <button type="submit">Envoyer</button>
-                <a class="link" href="../Controller/controller_mangasPage.php">annuler</a>
+                <a class="link" href="../Controller/controller_profil.php">annuler</a>
             </form>
         </div>
     </section>
